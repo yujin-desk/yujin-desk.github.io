@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,36 @@
     <title>김유진 아카이브 | Creator's Desk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         /* ===== Reset & Base ===== */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            --bg-primary: #F9F8F6; /* Paper texture off-white */
+            --bg-primary: #F9F8F6;
+            /* Paper texture off-white */
             --bg-secondary: #F0EFEA;
             --bg-card: #FFFFFF;
-            --text-primary: #2C2C2C; /* Charcoal */
+            --text-primary: #2C2C2C;
+            /* Charcoal */
             --text-secondary: #5C5C5C;
             --text-muted: #8F8F8F;
-            --accent-1: #D4A373; /* Wood/Beige tone */
-            --accent-2: #84A59D; /* Soft muted green */
-            --accent-3: #E07A5F; /* Soft rust/orange */
+            --accent-1: #D4A373;
+            /* Wood/Beige tone */
+            --accent-2: #84A59D;
+            /* Soft muted green */
+            --accent-3: #E07A5F;
+            /* Soft rust/orange */
             --border-color: #E2DFD6;
-            
+
             --font-sans: 'Inter', -apple-system, sans-serif;
             --font-serif: 'Noto Serif KR', serif;
         }
@@ -120,13 +130,16 @@
             text-align: center;
             position: relative;
         }
-        
+
         .hero::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: linear-gradient(var(--border-color) 1px, transparent 1px),
-                              linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+                linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
             background-size: 40px 40px;
             opacity: 0.4;
             z-index: -1;
@@ -137,11 +150,11 @@
             background: var(--bg-card);
             padding: 60px;
             border-radius: 4px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
             border: 1px solid var(--border-color);
             position: relative;
         }
-        
+
         .hero-content::before {
             content: '';
             position: absolute;
@@ -150,7 +163,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 15px;
-            background: rgba(0,0,0,0.05);
+            background: rgba(0, 0, 0, 0.05);
             border-radius: 10px;
         }
 
@@ -210,13 +223,13 @@
         .btn-primary {
             background: var(--text-primary);
             color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary:hover {
             background: #000;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .btn-secondary {
@@ -279,19 +292,29 @@
             border: 1px solid var(--border-color);
             padding: 40px;
             position: relative;
-            box-shadow: 2px 4px 15px rgba(0,0,0,0.02);
+            box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.02);
         }
-        
+
         .skill-group::before {
             content: '';
             position: absolute;
-            top: 0; left: 0;
-            width: 4px; height: 100%;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
         }
-        
-        .skill-group.planning::before { background: var(--accent-1); }
-        .skill-group.production::before { background: var(--accent-2); }
-        .skill-group.design::before { background: var(--accent-3); }
+
+        .skill-group.planning::before {
+            background: var(--accent-1);
+        }
+
+        .skill-group.production::before {
+            background: var(--accent-2);
+        }
+
+        .skill-group.design::before {
+            background: var(--accent-3);
+        }
 
         .skill-group h3 {
             font-family: var(--font-serif);
@@ -320,13 +343,13 @@
             font-size: 0.95rem;
             width: 120px;
         }
-        
+
         .skill-tags {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
-        
+
         .skill-tag {
             font-size: 0.75rem;
             padding: 4px 10px;
@@ -383,7 +406,7 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
             color: var(--text-primary);
         }
 
@@ -398,9 +421,11 @@
             color: var(--text-secondary);
             line-height: 1.6;
         }
-        
+
         @media (max-width: 768px) {
-            .process-timeline::before { display: none; }
+            .process-timeline::before {
+                display: none;
+            }
         }
 
         /* ===== Projects Section ===== */
@@ -408,7 +433,7 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-        
+
         .project-filters {
             display: flex;
             justify-content: center;
@@ -416,7 +441,7 @@
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
-        
+
         .filter-btn {
             padding: 8px 20px;
             background: transparent;
@@ -428,8 +453,9 @@
             transition: all 0.2s;
             border-radius: 4px;
         }
-        
-        .filter-btn.active, .filter-btn:hover {
+
+        .filter-btn.active,
+        .filter-btn:hover {
             background: var(--text-primary);
             color: white;
             border-color: var(--text-primary);
@@ -446,13 +472,13 @@
             border: 1px solid var(--border-color);
             padding: 16px;
             position: relative;
-            box-shadow: 2px 4px 15px rgba(0,0,0,0.04);
+            box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.04);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
             color: inherit;
             display: block;
         }
-        
+
         .project-card::before {
             content: '';
             position: absolute;
@@ -461,14 +487,14 @@
             transform: translateX(-50%);
             width: 40px;
             height: 15px;
-            background: rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.05);
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             z-index: 2;
         }
 
         .project-card:hover {
             transform: translateY(-5px) rotate(1deg);
-            box-shadow: 5px 15px 30px rgba(0,0,0,0.08);
+            box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.08);
         }
 
         .project-thumbnail {
@@ -488,7 +514,7 @@
         .project-card:hover .project-thumbnail {
             opacity: 0.9;
         }
-        
+
         .project-info {
             padding: 24px 8px 8px;
         }
@@ -501,7 +527,7 @@
             color: var(--text-primary);
             line-height: 1.4;
         }
-        
+
         .project-meta {
             margin-bottom: 16px;
         }
@@ -514,7 +540,7 @@
             margin-bottom: 6px;
             color: var(--text-secondary);
         }
-        
+
         .meta-label {
             font-weight: 600;
             color: var(--text-primary);
@@ -533,7 +559,7 @@
             color: var(--accent-1);
             font-weight: 500;
         }
-        
+
         .project-achievements {
             margin-top: 16px;
             padding-top: 16px;
@@ -559,12 +585,12 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             padding: 60px 40px;
-            box-shadow: 2px 4px 15px rgba(0,0,0,0.04);
+            box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.04);
             position: relative;
             background-image: repeating-linear-gradient(transparent, transparent 31px, var(--border-color) 31px, var(--border-color) 32px);
             background-position: 0 10px;
         }
-        
+
         .contact-card::before {
             content: '';
             position: absolute;
@@ -574,7 +600,7 @@
             width: 80px;
             height: 30px;
             background: #EAE5D9;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .contact-message {
@@ -639,20 +665,43 @@
         }
 
         /* ===== Utility Classes ===== */
-        .hide { display: none !important; }
+        .hide {
+            display: none !important;
+        }
 
         /* ===== Responsive ===== */
         @media (max-width: 768px) {
-            nav { padding: 16px 20px; }
-            .nav-links { display: none; }
-            section { padding: 60px 20px; }
-            .hero { padding: 100px 20px 60px; }
-            .hero-content { padding: 40px 20px; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .contact-card { padding: 40px 20px; }
+            nav {
+                padding: 16px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+
+            .hero-content {
+                padding: 40px 20px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                padding: 40px 20px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -699,7 +748,7 @@
                 <h2 class="section-title">책상 위의 도구들</h2>
                 <p class="section-desc">기획부터 프로덕션까지 원활한 작업 프로세스를 이끄는 핵심 도구상자입니다.</p>
             </div>
-            
+
             <div class="skills-container">
                 <!-- Planning -->
                 <div class="skill-group planning">
@@ -789,7 +838,7 @@
                 <span class="section-label">Work Process</span>
                 <h2 class="section-title">스토리에서 아웃풋까지</h2>
             </div>
-            
+
             <div class="process-timeline">
                 <div class="process-step">
                     <div class="process-icon">💡</div>
@@ -821,7 +870,7 @@
                 <h2 class="section-title">작업 서류함</h2>
                 <p class="section-desc">썸네일을 클릭하면 해당 원문이나 영상 페이지로 이동합니다.</p>
             </div>
-            
+
             <div class="projects-wrapper">
                 <!-- 카테고리 탭 -->
                 <div class="project-filters">
@@ -832,12 +881,13 @@
 
                 <div class="projects-grid">
                     <!-- Project 1: Article (Interview) -->
-                    <a href="https://shaggy-mindset-078892.framer.app/ready/tips-for-successful-networking-in-professional-circles" target="_blank" class="project-card" data-category="article">
-                        <div class="project-thumbnail" style="background-color: #F8F5F2;">
-                            🤝
+                    <a href="https://shaggy-mindset-078892.framer.app/ready/tips-for-successful-networking-in-professional-circles"
+                        target="_blank" class="project-card" data-category="article">
+                        <div class="project-thumbnail" style="background-color: #F8F5F2; padding: 0;">
+                            <img src="참고자료/인터뷰 썸네일.jpg" alt="인터뷰 썸네일" style="width:100%; height:100%; object-fit:cover; display:block;">
                         </div>
                         <div class="project-info">
-                            <h3>전문가 서클에서 성공적인 네트워킹을 위한 팁</h3>
+                            <h3>천재가 아니기에 분석합니다. 배우 최동원의 '표 값'에 대하여</h3>
                             <div class="project-meta">
                                 <div class="meta-line">
                                     <span class="meta-label">유형</span>
@@ -986,4 +1036,5 @@
         });
     </script>
 </body>
+
 </html>
